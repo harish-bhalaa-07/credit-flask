@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>credict card</title>
+    <style>
+        .act{
+            color: white;
+            padding-left: 250px;
+        }
+
+        body {
+            background-color: rgb(1, 22, 44);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgb(10, 32, 56);
+            color: #fff;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 1200px;
+            height: 60px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(6, 48, 94);
+            min-width: 230px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            color: #fff;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(5, 40, 77);
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .form{
+             margin-top: 150px;
+             margin-left: 150px;
+             
+
+        }
+
+    
+      .form form {
+
+        color: #fff;
+        background-color:rgb(13, 56, 103);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 1000px;
+        margin: 0 100px;
+          
+      }
+     
+
+      .form label {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 8px;
+      }
+
+      .form input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+
+      .form input[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+     .form input[type="submit"]:hover {
+          background-color: #0056b3;
+      }
+
+      .row {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 20px; /* Add margin between rows */
+      }
+      .col-md-3 {
+    flex: 0 0 calc(20% - 10px); /* Decreased the width to 20%, adjust as needed */
+    margin-right: 30px;
+    margin-top: 10px;
+}
+      
+      .col-md-6 {
+          flex: 0 0 calc(50% - 10px); /* 50% width, adjust as needed */
+          margin-right: 10px;
+      }
+
+      .col-md-12 {
+          flex: 0 0 100%; /* 100% width, adjust as needed */
+          margin-right: 0;
+      }
+
+      .p11 {
+          font-weight: bold;
+          margin-top: 10px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .form select {
+
+        /* Background color */
+        color: black !important; /* Text color */
+        width: 200px;
+        height:39px;
+        padding: 10px;
+        margin-top: 2px;
+        border-radius: 5px;
+    }
+
+    </style>
+</head>
+<body class="main-layout inner_page service_page">
+    <header>
+        <div class="container">
+            <div class="logo">Your Logo</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Our Services</a>
+                        <div class="dropdown-content">
+                            <a href="#credit-score">Credict Score</a>
+                            <a href="#loan-eligibility">Loan Eligibility</a>
+                            <a href="#churn-prediction">Churn Prediction</a>
+                            <a href="#credit-card-fraud">CreditCard Fraud Detection</a>
+                            <a href="#poverty-range">Poverty Range</a>
+                        </div>
+                    </li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <div class="form"> 
+        <form action="predict" method="POST" enctype="multipart/form-data">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="married">Limit Balance</label>
+                    <input type="text" id="dependents" name="LIMIT_BAL">
+                </div>
+                <div class="col-md-3">
+                    <label for="gender">Sex</label>
+                    <select id="gender" name="SEX">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div>
+              
+                <div class="col-md-3">
+                    <label for="education">Education</label>
+                    <select id="gender" name="EDUCATION">
+                      <option value="1">yes</option>
+                      <option value="2">no</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="education">Marriage</label>
+                    <select id="gender" name="MARRIAGE">
+                      <option value="1">yes</option>
+                      <option value="2">no</option>
+                  </select>
+                </div>
+              
+          </div>
+        
+          <div class="row">
+            <div class="col-md-3">
+                <label for="dependents" >Age</label>
+                <input type="text" id="dependents" name="Age">
+            </div>
+
+            <div class="col-md-3">
+                <label for="email">Payment 1</label>
+                <input type="text" id="dependents" name="PAY_0">
+            </div>
+            <div class="col-md-3">
+                <label for="email">Payment 2</label>
+                <input type="text" id="married" name="PAY_2">
+            </div>
+            <div class="col-md-3">
+                <label for="email">Bill Amount 1</label>
+                <input type="text" id="married" name="BILL_AMT1">
+            </div>
+           
+          
+        </div>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <label for="email">Bill Amount 2</label>
+                <input type="text" id="married" name="BILL_AMT2">
+            </div>
+            <div class="col-md-3">
+                <label for="email">Pay ATM 1</label>
+                <input type="text" id="married" name="PAT_ATM1">
+            </div>
+            <div class="col-md-3">
+                <label for="email">Pay ATM 2</label>
+                <input type="text" id="married" name="PAT_ATM2">
+            </div>
+         
+        </div>
+        
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+         </div>
+
+         
+        </form>
+    </div>
+    <div class="act">
+        {% if prediction_value %}
+        <p class="p11">{{ prediction_value }}</p>
+        {% endif %}
+        </div>
+</body>
+</html>
+
+
+

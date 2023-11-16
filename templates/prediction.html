@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CropIQ</title>
+      
+      <!-- bootstrap css -->
+      <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+      <!-- style css -->
+      <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+      <!-- Responsive-->
+      <link href="{{url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
+     
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page service_page">
+     
+      <div class="full_bg">
+         <!-- header -->
+         <header class="header-area">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class=" col-md-2 col-sm-3">
+                     <div class="logo">
+                        <a href="about.html">Crop<span>IQ</span></a>
+                     </div>
+                  </div>
+                  <div class="col-md-8 col-sm-9">
+                     <div class="navbar-area">
+                        <nav class="site-navbar">
+                           <ul>
+                              <li><a href="about.html">Home</a></li>
+                              <li><a class="active" href ="location.html">Location</a></li>
+                              <li><a href="soil.html">Soil Prediction</a></li>
+                              <li><a href="prediction.html">Crop Prediction</a></li>
+                              <li><a href="insurance.html">Insurance</a></li>
+                              <li><a href="contact.html">Contact</a></li>
+                           </ul>
+                           <button class="nav-toggler">
+                           <span></span>
+                           </button>
+                        </nav>
+                     </div>
+                  </div>
+                 
+               </div>
+            </div>
+         </header>
+         <!-- end header inner -->
+      </div>
+      <!-- services -->
+      <div class="prediction">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_left">
+                     <span>Crop Prediction </span>
+                   <P></P>
+               </div>
+            </div>
+            <form action="predict" method="POST" enctype="multipart/form-data">
+               <div class="row">
+                   <div class="col-md-6">
+                       <label for="name">Balance</label>
+                       <input type="text" id="name" name="LIMIT_BAL">
+                   </div>
+                   <div class="col-md-6">
+                       <label for="email">Gender</label>
+                       <input type="text" id="email" name="SEX">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-6">
+                       <label for="email">EDUCATION</label>
+                       <input type="text" id="email" name="EDUCATION">
+                   </div>
+                   <div class="col-md-6">
+                       <label for="email">MARRIAGE</label>
+                       <input type="text" id="email" name="MARRIAGE">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-6">
+                       <label for="email">AGE</label>
+                       <input type="text" id="email" name="AGE">
+                   </div>
+                   <div class="col-md-6">
+                       <label for="email">P</label>
+                       <input type="text" id="email" name="PAY_0">
+                   </div>
+                   <div class="col-md-6">
+                    <label for="email">A</label>
+                    <input type="text" id="email" name="PAY_2">
+                </div>
+                   <div class="col-md-6">
+                     <label for="email">BILL</label>
+                     <input type="text" id="email" name="BILL_AMT1">
+                 </div>
+                 <div class="col-md-6">
+                    <label for="email">Loan Amount Term</label>
+                    <input type="text" id="email" name="BILL_AMT2">
+                </div>
+                <div class="col-md-6">
+                    <label for="email">PAY</label>
+                    <input type="text" id="email" name="PAY_AMT1">
+                </div>
+                <div class="col-md-6">
+                    <label for="email">Property Area</label>
+                    <input type="text" id="email" name="PAY_AMT2">
+                </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12">
+                       <input type="submit" value="Submit">
+                   </div>
+               </div>
+            </div>
+           </form>
+
+         </div>
+         {% if prediction_value %}
+         <p class="p11">{{ prediction_value }}</p>
+         {% endif %}
+           
+         </div>
+      </div>
+      <!-- end services -->
+      
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
